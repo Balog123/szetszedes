@@ -1,0 +1,174 @@
+#update-row {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+  
+#update-row label {
+    display: block;
+    margin-bottom: 5px;
+}
+  
+#modositas-input {
+    width: 200px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+  
+#update-row-btn {
+    display: inline-block;
+    width: 100px;
+    margin-top: 10px;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+  
+#update-row-btn:hover {
+    background-color: #0056b3;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+#megjelenites {
+    margin: 0 auto;
+    width: 80%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+#table img {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+thead th {
+    background-color: #007bff;
+    color: white;
+    text-align: left;
+    padding: 10px;
+}
+
+tbody {
+    height: 200px;
+    overflow-y: auto;
+    padding-bottom: 10px;
+}
+
+tbody td {
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+}
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+#termek_adat {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#termek_adat label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#termek_adat input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#termek_adat button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#termek_adat button:hover {
+    background-color: #0056b3;
+}
+
+#sikeres-feltöltés, #sikertelen-feltöltés {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#sikeres-feltoltes {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #d4edda;
+    color: #155724;
+    display: none;
+    font-size: 25px;
+}
+
+#sikertelen-feltoltes {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f8d7da;
+    color: #721c24;
+    display: none;
+    font-size: 25px;
+
+}
+
+@media only screen and (max-width: 600px) {
+    #termek_adat {
+        padding: 10px;
+    }
+    
+    #termek_adat input {
+        padding: 6px;
+    }
+    
+    #termek_adat button {
+        padding: 8px;
+    }
+    
+    #sikeres-feltöltés, #sikertelen-feltöltés {
+        padding: 8px;
+    }
+}

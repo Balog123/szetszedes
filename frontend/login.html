@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Bejelentkezés</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <!-- top nav -->
+        <div class="top-nav">
+            <div class="container d-flex">
+                <p>Rendeljen online vagy Hívjon minket: (+36) 12 34 56 7</p>
+                <ul class="d-flex">
+                    <li><a href="">Rólunk</a></li>
+                    <li><a href="">Gyakran feltett kérdések</a></li>
+                    <li><a href="">Kapcsolatfelvétel</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="navigation">
+            <div class="nav-center container d-flex">
+                <a href="/">
+                    <span>
+                        <img src="/images/logo.jpg" class="logo" alt="Logo" title="Logo">
+                    </span>
+                </a>
+
+                <nav class="navbar">
+                    <ul class="nav-list d-flex">
+                        <!-- Navbar link -->
+                        <li class="nav-item">
+                            <a href="/" class="nav-link">Kezdőlap</a>
+                        </li>
+                        <!-- Hamburger menu link -->
+                        <li class="without-dropdown nav-item">
+                            <div class="nav-link-termekek"><a href="/products">Termékek</a></div>
+                        </li>
+                        <!-- Navbar link -->
+                        <li class="nav-item with-dropdown">
+                            <div class="nav-link-termekek nav-link-categories"><a href="/products">Termékek</a></div>
+                            <div class="dropdown-content"></div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/#galeria2" class="nav-link">Galéria</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/#kapcsolat" class="nav-link">Kapcsolat</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/aszf" class="nav-link">ÁSZF</a>
+                        </li>
+
+                        <li class="icons d-flex">
+                            <a href="/regisztracio" class="icon"><i class="bx bx-user"></i></a>
+                            <!-- <div class="icon">
+                                <i class="bx bx-search"></i>
+                            </div> -->
+
+                            <div class="icon" id="searchIcon2"><i class="bx bx-search"></i></div>
+
+                            <div class="icon">
+                                <i class="bx bx-heart"></i>
+                                <span class="d-flex">0</span>
+                            </div>
+                            <a href="/kosar" class="icon">
+                                <i class="bx bx-cart"></i>
+                                <span class="d-flex">0</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Icons -->
+                <div class="icons d-flex">
+                    <a href="#" class="icon" id="userIcon"><i class="bx bx-user"></i></a>
+
+
+                    <div class="icon" id="searchIcon"><i class="bx bx-search"></i></div>
+
+                    <div class="icon">
+                        <i class="bx bx-heart"></i>
+                        <span class="d-flex">0</span>
+                    </div>
+                    <a href="/kosar" class="icon">
+                        <i class="bx bx-cart"></i>
+                        <span class="d-flex">0</span>
+                    </a>
+                </div>
+                <!-- Search Bar -->
+                <div id="searchBar" class="search-bar-container">
+                    <input type="text" id="searchInput" placeholder="Keresés...">
+                    <div class="icon" id="searchSubmit"><i class="bx bx-search"></i></div>
+                </div>
+
+                <!-- Hamburger -->
+                <div class="hamburger">
+                    <i class="bx bx-menu-alt-left"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Login -->
+    <div class="container">
+        <div class="login-form">
+            <form action="/bejelentkezes" method="POST">
+                <h1>Bejelentkezés</h1>
+                <p>
+                    Bejelentkezéshez adja meg adatait, ha még nincs fiókja
+                    <a href="/regisztracio">Regisztráljon be</a>
+                </p>
+
+                <label for="loginEmail">Email cím</label>
+                <input type="email" placeholder="Email cím" name="email" id="loginEmail" required />
+
+                <label for="loginPsw">Jelszó</label>
+                <input type="password" placeholder="Jelszó" name="jelszo" id="loginPsw" required />
+
+                <label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom: 15px" />
+                    Emlékezz rám
+                </label>
+
+                <h1 id="sikeres-bejelentkezes-uzenet"></h1>
+                <div class="buttons">
+                    <button type="button" class="cancelbtn" id="cancelbtn">Mégsem</button>
+                    <button type="button" class="signupbtn" id="loginbtn">Bejelentkezés</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="./js/login.js"></script>
+
+    <script src="./js/script.js"></script>
+
+</body>
+
+</html>

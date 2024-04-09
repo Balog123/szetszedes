@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+    <!-- Glidejs -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.core.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.theme.css" />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>Webshop</title>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <!-- top nav -->
+        <div class="top-nav">
+            <div class="container d-flex">
+                <p>Rendeljen online vagy Hívjon minket: (+36) 12 34 56 7</p>
+                <ul class="d-flex">
+                    <li><a href="">Rólunk</a></li>
+                    <li><a href="">Gyakran feltett kérdések</a></li>
+                    <li><a href="">Kapcsolatfelvétel</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="navigation">
+            <div class="nav-center container d-flex">
+                <a href="/">
+                    <span>
+                        <img src="/images/logo.jpg" class="logo" alt="Logo" title="Logo">
+                    </span>
+                </a>
+
+                <nav class="navbar">
+                    <ul class="nav-list d-flex">
+                        <!-- Navbar link -->
+                        <li class="nav-item">
+                            <a href="/" class="nav-link">Kezdőlap</a>
+                        </li>
+                        <!-- Hamburger menu link -->
+                        <li class="without-dropdown nav-item">
+                            <div class="nav-link-termekek"><a href="/products">Termékek</a></div>
+                        </li>
+                        <!-- Navbar link -->
+                        <li class="nav-item with-dropdown">
+                            <div class="nav-link-termekek nav-link-categories"><a href="/products">Termékek</a></div>
+                            <div class="dropdown-content"></div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#kategoria" class="nav-link">Kategóriák</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#galeria" class="nav-link">Galéria</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#kapcsolat" class="nav-link">Kapcsolat</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/aszf" class="nav-link">ÁSZF</a>
+                        </li>
+
+                        <li class="icons d-flex">
+                            <a href="/regisztracio" class="icon"><i class="bx bx-user"></i></a>
+                            <!-- <div class="icon">
+                                <i class="bx bx-search"></i>
+                            </div> -->
+
+                            <div class="icon" id="searchIcon2"><i class="bx bx-search"></i></div>
+
+                            <div class="icon">
+                                <i class="bx bx-heart"></i>
+                                <span class="d-flex">0</span>
+                            </div>
+                            <a href="/kosar" class="icon">
+                                <i class="bx bx-cart"></i>
+                                <span class="d-flex">0</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Icons -->
+                <div class="icons d-flex">
+                    <a href="#" class="icon" id="userIcon"><i class="bx bx-user"></i></a>
+
+
+                    <div class="icon" id="searchIcon"><i class="bx bx-search"></i></div>
+
+                    <div class="icon">
+                        <i class="bx bx-heart"></i>
+                        <span class="d-flex">0</span>
+                    </div>
+                    <a href="/kosar" class="icon">
+                        <i class="bx bx-cart"></i>
+                        <span class="d-flex">0</span>
+                    </a>
+                </div>
+                <!-- Search Bar -->
+                <div id="searchBar" class="search-bar-container">
+                    <input type="text" id="searchInput" placeholder="Keresés...">
+                    <div class="icon" id="searchSubmit"><i class="bx bx-search"></i></div>
+                </div>
+
+                <!-- Hamburger -->
+                <div class="hamburger">
+                    <i class="bx bx-menu-alt-left"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="home" id="home">
+        <div class="content">
+            <h3>Egy üzlet mindenek felett</h3>
+            <p>
+                Merülj el az inspirációban és légy részese az újítások világának!
+            </p>
+            <a href="/products" class="btn">Vásárlás</a>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <h1 class="heading" id="kategoria"><span>Népszerű</span> Kategóriák</h1>
+    <section class="section category">
+        <div class="cat-center">
+            <div class="cat">
+                <img src="/images/view-room-interior-with-furniture-copy-space.jpg" alt="" />
+                <div>
+                    <!-- <p>Nappali</p> -->
+                    <a href="category.html?category=nappali" target="_self">Nappali</a>
+                </div>
+            </div>
+            <div class="cat">
+                <img src="/images/87460.jpg" alt="" />
+                <div>
+                    <!-- <p>Hálószoba</p> -->
+                    <a href="category.html?category=haloszoba" target="_self">Hálószoba</a>
+                </div>
+            </div>
+            <div class="cat">
+                <img src="/images/empty-room-with-chairs-desks.jpg" alt="" />
+                <div>
+                    <!-- <p>Iroda</p> -->
+                    <a href="category.html?category=irodai" target="_self">Irodai</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Arrivals -->
+    <h1 class="heading">Legújabb <span>Termékek</span></h1>
+    <section class="sectionarrival new-arrival">
+        <div class="product-center" id="latest-products-container">
+    </section>
+
+    <!-- Teszt -->
+    <div class="galeriacim">
+        <h1 class="heading2" id="galeria">Trend <span id="galeria2">&</span> Design</h1>
+    </div>
+    <section class="section banner" id="galeria">
+        <div class="left">
+            <!-- <span class="trend">Trend & Design</span> -->
+            <h1>Tekintse meg galériánkat</h1>
+            <p>Képek egyedi termékekről</p>
+            <a href="./gallery.html" class="button btn-2">Érdekel</a>
+        </div>
+        <div class="right">
+            <img src="/images/—Pngtree—3d  improvement section sofa_4463034.png" alt="" />
+        </div>
+    </section>
+
+    <!-- Featured -->
+    <!-- <h1 class="heading"> Ez <span>is</span> Érdekelheti </h1>
+    <section class="sectionarrival new-arrival">
+        <div class="product-center">
+            <div class="product-item">
+                <div class="overlay">
+                    <a href="" class="product-thumb">
+                        <img src="/images/23333.jpg" alt="" />
+                    </a>
+                </div>
+                <div class="product-info">
+                    <span>Irodai kellék</span>
+                    <a href="">Irodai szék</a>
+                    <h4>12.500 Ft</h4>
+                </div>
+                <ul class="icons">
+                    <li><i class="bx bx-heart"></i></li>
+                    <li><i class="bx bx-search"></i></li>
+                    <li><i class="bx bx-cart"></i></li>
+                </ul>
+            </div>
+    </section> -->
+
+    <!-- Filling -->
+    <div class="sectionfilling"></div>
+
+    <!-- Contact -->
+    <section class="section contact" id="kapcsolat">
+        <div class="row">
+            <div class="col">
+                <h2>Kapcsolatfelvétel</h2>
+                <p>Ha bármilyen kérdése vagy észrevétele van, kérjük, vegye fel velünk a kapcsolatot az alábbi
+                    elérhetőségeinken:</p>
+                <a href="#" class="button btn-1" id="infoBtn">Info</a>
+            </div>
+            <div class="col">
+                <h2>Hírlevél</h2>
+                <p>Legyen az elsők között, akik értesülnek kedvezményeinkről! Iratkozzon fel hírlevelünkre, hogy ne
+                    maradjon le!</p>
+                <form action="/api/send-email" method="POST">
+                    <div>
+                        <input type="email" name="email" placeholder="Email cím" />
+                        <button type="submit">Küldés</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popup ablak -->
+    <div class="popup2" id="infoPopup2">
+        <div class="popup-content2">
+            <span class="close-btn" id="closeBtn">&times;</span>
+            <h2>Elérhetőségeink:</h2>
+            <p>Telefonszám: (+36) 12 34 56 7</p>
+            <p>Email-cím: butorporjekt@gmail.com</p>
+            <p>Facebook: butorprojekt</p>
+            <p>Instagram: butorprojekt</p>
+        </div>
+    </div>
+
+    <!-- Filling -->
+    <div class="sectionfilling"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="row">
+            <div class="col d-flex">
+                <h4>Hasznos linkek</h4>
+                <a href="/">Kezdőlap</a>
+                <a href="/products">Összes termék</a>
+                <a href="#kategoria">Kategóriák</a>
+                <a href="#gallery">Galéria</a>
+                <a href="/regisztracio">Regisztráció</a>
+                <a href="/bejelentkezes">Bejelentkezés</a>
+                <a href="/kosar">Kosár</a>
+            </div>
+            <div class="col d-flex">
+                <h4>Információ</h4>
+                <a href="#kapcsolat">Kapcsolat</a>
+                <a href="/aszf">ÁSZF</a>
+            </div>
+            <div class="col d-flex">
+                <h4>Közösségi média</h4>
+                <a href="https://facebook.com/" target="_blank"><span><i class="bx bxl-facebook-square"></i></span></a>
+                <a href="https://instagram.com/" target="_blank"><span><i class="bx bxl-instagram-alt"></i></span></a>
+                <a href="https://github.com/Balog123/vizsga" target="_blank"><span><i class="bx bxl-github"></i></span></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- popup -->
+    <!-- <div class="popup hide-popup">
+        <div class="popup-content">
+            <div class="popup-close">
+                <i class='bx bx-x'></i>
+            </div>
+            <div class="popup-left">
+                <div class="popup-img-container">
+                    <img class="popup-img" src="./images/png.png" alt="popup">
+                </div>
+            </div>
+            <div class="popup-right">
+                <div class="right-content">
+                    <h1>Légy naprakész!</h1>
+                    <p>
+                        Szeretnél kapni új termékekről értesítést? Iratkozz fel hírlevelünkre és rendszeresen küldünk
+                        értékes ajánlatokat!
+                    </p>
+                    <form action="#" id="popupForm">
+                        <input type="email" placeholder="Adja meg az e-mail címét..." class="popup-form"
+                            id="emailInput">
+                        <button class="feliratkozasGomb" type="button" id="subscribeBtn">Feliratkozás</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- Glidejs -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/glide.js"></script> -->
+    <!-- Slidejs -->
+    <!-- <script src="./js/slider.js"></script> -->
+
+
+    <!-- indexjs -->
+    <script src="/js/script.js"></script>
+
+    <!-- dropdownjs -->
+    <script src="/js/dropdown.js"></script>
+
+    <!-- latest products -->
+    <script src="/js/latestproducts.js"></script>
+</body>
+
+</html>
