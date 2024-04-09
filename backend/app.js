@@ -58,6 +58,7 @@ app.get('/products/:id', fileHandler.sendSingleProducts)
 app.get('/kosar', fileHandler.sendCart);
 app.use('/api/kosar', cartRoutes)
 
+
 app.get('/rendeles', fileHandler.sendOrder);
 app.use('/api/order', orderRoutes)
 
