@@ -19,6 +19,8 @@ const cartRoutes = require('./routes/cartRoutes');
 const orderRoutes = require('./routes/orderRoutes')
 const searchRoutes = require('./routes/searchRoutes')
 const adminRoutes = require('./routes/adminRoutes')
+const emailfeliratkozasRoutes = require('./routes/emailfeliratkozasRoutes')
+const check_auth = require('./routes/check-authRoutes')
 
 app.use(cors());
 app.use(express.json());
@@ -49,25 +51,25 @@ app.use('/api/logout', logoutRoutes);
 app.use('/api/user', userDetailsRoutes);
 app.use('/api/save-user-details', updateUserRoutes);
 
-app.get('/products', fileHandler.sendAllProducts)
+app.get('/products', fileHandler.sendAllProducts);
 app.use('/api/products', productsRoutes);
 app.use('/api/related-products', related_productsRoutes );
 
-app.get('/products/:id', fileHandler.sendSingleProducts)
+app.get('/products/:id', fileHandler.sendSingleProducts);
 
 app.get('/kosar', fileHandler.sendCart);
-app.use('/api/kosar', cartRoutes)
+app.use('/api/kosar', cartRoutes);
 
 
 app.get('/rendeles', fileHandler.sendOrder);
-app.use('/api/order', orderRoutes)
+app.use('/api/order', orderRoutes);
 
-app.get('/admin', fileHandler.sendAdmin)
-app.use('/api/admin', adminRoutes)
+app.get('/admin', fileHandler.sendAdmin);
+app.use('/api/admin', adminRoutes);
 
-app.get('/check-auth', authenticateUser, (req, res) => {
-    console.log('User is authenticated:', req.user);
-    res.json({ success: true, data: req.user });
-});
+app.use('/api/send-email', emailfeliratkozasRoutes);
+
+app.use('/check-auth', check_auth)
+
 
 app.listen(process.env.PORT, () => console.log(`Alkalmazás ${process.env.PORT} porton fut`));

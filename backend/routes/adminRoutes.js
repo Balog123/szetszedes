@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const dbService = require('../dbConfig');
+const dbService = require('../services/adminServices');
 
 
 router.post('/feltoltes', (req, res) => {
@@ -39,6 +39,24 @@ router.patch('/modositas', (request, response) => {
     result
         .then(data => response.json({ success: data }))
         .catch(err => console.log(err));
+});
+
+router.delete('/:id', (req, res) => {
+    const termek_id = req.params.id;
+    const db = dbService.getDbServiceInstance();
+
+    db.termekAdminTorles(termek_id)
+        .then(result => {
+            if (result.affectedRows === 0) {
+                res.status(404).json({ success: false, error: "Product not found" });
+            } else {
+                res.status(200).json({ success: true, message: "Product deleted successfully" });
+            }
+        })
+        .catch(error => {
+            console.error("Error deleting product:", error);
+            res.status(500).json({ success: false, error: "Error deleting product" });
+        });
 });
 
 module.exports = router;

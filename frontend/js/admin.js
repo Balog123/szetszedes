@@ -55,16 +55,13 @@ function handleEditRow(id) {
 }
 
 function deleteRow(termekId) {
-    fetch(`http://localhost:8000/api/products/${termekId}`, {
+    fetch(`http://localhost:8000/api/admin/${termekId}`, {
         method: 'DELETE'
     })
     .then(response => response.json())
     .then(data => {
         if (data.success) {
-            fetch('http://localhost:8000/admin/megjelenites')
-            .then(response => response.json())
-            .then(data => loadHTMLTable(data['data']))
-            .catch(error => console.error('Hiba történt:', error));
+            location.reload();
         } else {
             console.error(data.error);
         }
@@ -125,6 +122,7 @@ feltoltes.onclick = function () {
         .then(data => {
             console.log(data)
             if (data.success === true) {
+                location.reload();
                 document.getElementById('sikeres-feltoltes').style.display = "block"
                 document.getElementById('sikeres-feltoltes').innerHTML = 'Sikeresen feltöltötte az adatokat.'
             } else {
