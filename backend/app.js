@@ -15,11 +15,17 @@ const categoriesRoutes = require('./routes/categoriesRoutes');
 const productsRoutes = require('./routes/productRoutes');
 const related_productsRoutes = require('./routes/relatedproductsRoutes');
 const updateUserRoutes = require('./routes/updateUserRoutes');
+const cartRoutes = require('./routes/cartRoutes');
+const orderRoutes = require('./routes/orderRoutes')
+const searchRoutes = require('./routes/searchRoutes')
 
 app.use(cors());
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
+
+const authenticateAdmin = require('./auth/authAdmin')
+app.use(['/admin', '/admin/*'], authenticateAdmin);
 
 app.use('/css', express.static(path.resolve(__dirname, '..', 'frontend', 'css')));
 app.use('/images', express.static(path.resolve(__dirname, '..', 'frontend', 'images')));
@@ -29,6 +35,7 @@ app.use(express.static(path.resolve(__dirname, '..', 'frontend')));
 app.get('/', fileHandler.sendIndex);
 app.use('/api/latest-products', latest_productRoutes);
 app.use('/api/categories', categoriesRoutes);
+app.use('/api/search', searchRoutes)
 
 app.get('/regisztracio', fileHandler.sendRegister);
 app.use('/api/registration', registerRoutes);
@@ -46,6 +53,14 @@ app.use('/api/products', productsRoutes);
 app.use('/api/related-products', related_productsRoutes );
 
 app.get('/products/:id', fileHandler.sendSingleProducts)
+
+app.get('/kosar', fileHandler.sendCart);
+app.use('/api/kosar', cartRoutes)
+
+app.get('/rendeles', fileHandler.sendOrder);
+app.use('/api/order', orderRoutes)
+
+app.get('/admin', fileHandler.sendAdmin)
 
 app.get('/check-auth', authenticateUser, (req, res) => {
     console.log('User is authenticated:', req.user);

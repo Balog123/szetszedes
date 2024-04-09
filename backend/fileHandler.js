@@ -24,4 +24,16 @@ function sendSingleProducts(req, res) {
     res.sendFile(path.resolve(__dirname, '..', 'frontend', 'singleproduct.html'));
 }
 
-module.exports = { sendIndex, sendRegister, sendLogin, sendProfile, sendAllProducts, sendSingleProducts };
+function sendCart(req, res) {
+    res.sendFile(path.resolve(__dirname, '..', 'frontend', 'cart.html'));
+}
+
+function sendOrder(req, res) {
+    res.sendFile(path.resolve(__dirname, '..', 'frontend', 'order.html'));
+}
+
+function sendAdmin(req, res) {
+    res.sendFile(path.resolve(__dirname, '..', 'frontend', 'admin.html'));
+}
+
+module.exports = { sendIndex, sendRegister, sendLogin, sendProfile, sendAllProducts, sendSingleProducts, sendCart, sendOrder, sendAdmin };
