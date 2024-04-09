@@ -18,6 +18,7 @@ const updateUserRoutes = require('./routes/updateUserRoutes');
 const cartRoutes = require('./routes/cartRoutes');
 const orderRoutes = require('./routes/orderRoutes')
 const searchRoutes = require('./routes/searchRoutes')
+const adminRoutes = require('./routes/adminRoutes')
 
 app.use(cors());
 app.use(express.json());
@@ -61,6 +62,7 @@ app.get('/rendeles', fileHandler.sendOrder);
 app.use('/api/order', orderRoutes)
 
 app.get('/admin', fileHandler.sendAdmin)
+app.use('/admin', adminRoutes)
 
 app.get('/check-auth', authenticateUser, (req, res) => {
     console.log('User is authenticated:', req.user);

@@ -3,7 +3,7 @@ const router = express.Router();
 const dbService = require('../db-config');
 
 
-router.post('/admin/feltoltes', (req, res) => {
+router.post('/feltoltes', (req, res) => {
     const { kategoria, kep_url, nev, ar, leiras, szelesseg, magassag, hossz, raktaron } = req.body
     const db = dbService.getDbServiceInstance()
 
@@ -19,7 +19,7 @@ router.post('/admin/feltoltes', (req, res) => {
         })
 })
 
-router.get('/admin/megjelenites', (req, res) => {
+router.get('/megjelenites', (req, res) => {
     const db = dbService.getDbServiceInstance();
 
     db.termekAdminMegjelenites()
@@ -30,7 +30,7 @@ router.get('/admin/megjelenites', (req, res) => {
         });
 });
 
-router.patch('/admin/modositas', (request, response) => {
+router.patch('/modositas', (request, response) => {
     const { id, ar } = request.body;
     const db = dbService.getDbServiceInstance();
 
