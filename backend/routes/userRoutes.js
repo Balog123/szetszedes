@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const dbService = require('../db-config');
+const dbService = require('../services/userServices');
 const authenticateUser = require('../auth/authUser')
 
 router.get('/', authenticateUser, async (req, res) => {

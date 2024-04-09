@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const dbService = require('../db-config');
+const dbService = require('../dbConfig');
 const authenticateUser = require('../auth/authUser')
 const nodemailer = require('nodemailer');
 

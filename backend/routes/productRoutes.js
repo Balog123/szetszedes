@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const dbService = require('../db-config');
+const dbService = require('../services/productServices');
 const connection = dbService.getDbServiceInstance().getConnection();
 
 router.get('/', (req, res) => {

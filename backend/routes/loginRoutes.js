@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const dbService = require('../db-config');
+const dbService = require('../services/userServices');
 const jwt = require('jsonwebtoken');
 
 router.post('/', (request, response) => {

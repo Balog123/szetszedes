@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const dbService = require('../db-config');
+const dbService = require('../services/userServices');
 
 router.post('/', function (request, response) {
     const { keresztnev, vezeteknev, email, jelszo } = request.body
