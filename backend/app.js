@@ -62,7 +62,7 @@ app.get('/rendeles', fileHandler.sendOrder);
 app.use('/api/order', orderRoutes)
 
 app.get('/admin', fileHandler.sendAdmin)
-app.use('/admin', adminRoutes)
+app.use('/api/admin', adminRoutes)
 
 app.get('/check-auth', authenticateUser, (req, res) => {
     console.log('User is authenticated:', req.user);

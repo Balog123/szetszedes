@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('http://localhost:8000/admin/megjelenites')
+    fetch('http://localhost:8000/api/admin/megjelenites')
     .then(response => response.json())
     .then(data => loadHTMLTable(data['data']))
     .catch(error => console.error('Hiba történt:', error));
@@ -104,7 +104,7 @@ feltoltes.onclick = function () {
             return;
         }
 
-        fetch('http://localhost:8000/admin/feltoltes', {
+        fetch('http://localhost:8000/api/admin/feltoltes', {
             method: 'POST',
             headers: { 'Content-type': 'application/json' },
             body: JSON.stringify({
@@ -146,7 +146,7 @@ const updateBtn = document.querySelector('#update-row-btn');
 updateBtn.onclick = function() {
     const modositas_input = document.querySelector('#modositas-input')
 
-    fetch('http://localhost:8000/admin/modositas', {
+    fetch('http://localhost:8000/api/admin/modositas', {
         method: 'PATCH',
         headers: {
             'Content-type' : 'application/json'
