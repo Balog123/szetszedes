@@ -36,4 +36,8 @@ function sendAdmin(req, res) {
     res.sendFile(path.resolve(__dirname, '..', 'frontend', 'admin.html'));
 }
 
-module.exports = { sendIndex, sendRegister, sendLogin, sendProfile, sendAllProducts, sendSingleProducts, sendCart, sendOrder, sendAdmin };
+function sendASZF(req, res) {
+    res.sendFile(path.resolve(__dirname, '..', 'frontend', 'aszf.html'));
+}
+
+module.exports = { sendIndex, sendRegister, sendLogin, sendProfile, sendAllProducts, sendSingleProducts, sendCart, sendOrder, sendAdmin, sendASZF };

@@ -71,5 +71,7 @@ app.use('/api/send-email', emailfeliratkozasRoutes);
 
 app.use('/check-auth', check_auth)
 
+app.get('/aszf', fileHandler.sendASZF)
+
 
 app.listen(process.env.PORT, () => console.log(`Alkalmazás ${process.env.PORT} porton fut`));

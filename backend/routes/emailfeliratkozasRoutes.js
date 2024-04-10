@@ -10,7 +10,7 @@ const transporter = nodemailer.createTransport({
     }
 });
 
-router.post('/api/send-email', (req, res) => {
+router.post('/', (req, res) => {
     const { email } = req.body;
 
     const mailOptions = {
